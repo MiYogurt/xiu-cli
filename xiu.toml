@@ -1,0 +1,22 @@
+[env]
+NAME="Yugo"
+
+[[pipes]]
+name='test'
+shell='''
+echo $NAME
+'''
+
+[[pipes]]
+name='build'
+shell='''
+echo 陈独秀
+'''
+
+[[pipes]]
+name='deploy'
+skip=true
+shell='''
+echo 买橘子
+'''
+
