@@ -7,12 +7,13 @@ shell='''
 echo $NAME
 sleep 2
 cal
+echo "\a"
 '''
 
 [[pipes]]
 name='build'
 shell='''
-echo 陈独秀
+echo 陈独秀同学，请你坐下
 '''
 
 [[pipes]]
