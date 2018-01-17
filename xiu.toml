@@ -5,6 +5,8 @@ NAME="Yugo"
 name='test'
 shell='''
 echo $NAME
+sleep 2
+cal
 '''
 
 [[pipes]]

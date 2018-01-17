@@ -1,6 +1,6 @@
 {
   "name": "xiu-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a mini shell tool by toml",
   "main": "index.js",
   "scripts": {
@@ -24,13 +24,15 @@
     "babel-core": "^6.26.0",
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "lerna": "^2.5.1"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "chalk": "^2.3.0",
     "runscript": "^1.3.0",
-    "toml": "^2.3.3"
+    "toml": "^2.3.3",
+    "xiu-plugin-shell": "^0.0.1"
   }
 }
