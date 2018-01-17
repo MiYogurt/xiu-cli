@@ -1,12 +1,13 @@
 {
   "name": "xiu-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "a mini shell tool by toml",
   "main": "index.js",
   "scripts": {
     "compile": "babel src -d lib",
     "precommit": "pretty-quick --staged",
-    "lint": "eslint --fix src/"
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/"
   },
   "files": ["bin", "lib"],
   "bin": {
@@ -33,7 +34,9 @@
     "chalk": "^2.3.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.5.0",
+    "fs-extra": "^5.0.0",
     "husky": "^0.14.3",
+    "js-yaml": "^3.10.0",
     "prettier": "^1.10.2",
     "pretty-quick": "^1.2.1",
     "runscript": "^1.3.0",

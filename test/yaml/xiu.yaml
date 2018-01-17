@@ -1,0 +1,14 @@
+env:
+  NAME: yugo
+
+pipes:
+  - name: 'test'
+    shell: |
+      echo $NAME
+      sleep 2
+      cal
+      echo "\a"
+
+  - name: 'run'
+    shell: |
+      echo hello
