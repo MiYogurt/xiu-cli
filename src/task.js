@@ -42,7 +42,7 @@ export async function queue({ env, pipes, ignore = [] }, cwd) {
 
             // 将属性名映射成插件明
             for(let name of taskNames){
-                console.log(name)
+
                 let plugin = get_plugin(name);
 
                 if (!plugin) {
