@@ -68,3 +68,5 @@ Object.defineProperty(exports, "__esModule", {
 ```
 
 以 shell 插件为例，`task` 是当前任务的所以配置，shell 是一个执行 shell 的执行器，放回一个 `false` 代表不跳过，放回 true 代表跳过本插件的运行。
+
+然后发布你的插件，假如你的插件叫`xiu-plugin-deploy`，那么配置项建议为，`deploy`，假如开发了插件，你可以提交一个 pr ，在 readme 里面加上你的插件链接地址。
