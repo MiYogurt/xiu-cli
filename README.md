@@ -1,20 +1,22 @@
-# 秀
-
 <div align=center><img width="150" height="150"  src="./other/logo.png" alt="logo"></div>
 
-秀的拼音，在 toml 里面写配置，然后通过插件运行的工具，`shell`属性，对应`xiu-plugin-shell`插件。默认只带 `shell`插件。
+![show](./other/show.gif)
 
+> 陈独秀坐飞机 -- 在天上秀
 
-## usage
+write bash script in toml file.
 
-1.安装命令行工具
+property `shell` -> plugin `xiu-plugin-shell`, default install `xiu-plugin-shell` 。
+
+## Usage
+
+1. Install
 
 ```bash
 npm i -g xiu-cli
 ```
 
-
-2.创建配置文件 `xiu.toml`
+2. Create `xiu.toml` config file
 
 ```toml
 [env]
@@ -41,32 +43,31 @@ skip=true
 shell='''
 echo 买橘子
 '''
-
 ```
 
+3. Run commond
 
-3. 运行命令
-
-设置了 skip 的，会跳过该调命令。
+if you set skip , then will be skip the task.
 
 ```
 ➜ xiu
 ```
 
-## 如何开发插件
+## How to create plugin
 
 ```js
-function shell(task, shell){
-    return shell(task.shell).then(() => false)
+function shell(task, shell) {
+  // task is config object
+  // shell is pomisefiy spawn
+  // you code in here
+  return shell(task.shell) // like this
 }
 
 module.exports = module.exports.default = exports = shell
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+Object.defineProperty(exports, '__esModule', {
+  value: true
+})
 ```
 
-以 shell 插件为例，`task` 是当前任务的所以配置，shell 是一个执行 shell 的执行器，放回一个 `false` 代表不跳过，放回 true 代表跳过本插件的运行。
-
-然后发布你的插件，假如你的插件叫`xiu-plugin-deploy`，那么配置项建议为，`deploy`，假如开发了插件，你可以提交一个 pr ，在 readme 里面加上你的插件链接地址。
+publish your package, and the package name like `xiu-plugin-deploy`, and in your config file add `deploy` property .
