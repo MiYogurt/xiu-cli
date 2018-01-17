@@ -1,41 +1,43 @@
 {
-	"name": "xiu-cli",
-	"version": "0.0.5",
-	"description": "a mini shell tool by toml",
-	"main": "index.js",
-	"scripts": {
-		"compile": "babel src -d lib",
-		"lint": "eslint src/",
-		"lint": "eslint --fix src/"
-	},
-	"files": ["bin", "lib"],
-	"bin": {
-		"xiu": "bin/xiu"
-	},
-	"keywords": ["shell", "ci"],
-	"author": "Yugo",
-	"license": "MIT",
-	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-core": "^6.26.0",
-		"babel-eslint": "^8.2.1",
-		"babel-plugin-syntax-async-functions": "^6.13.0",
-		"babel-plugin-transform-runtime": "^6.23.0",
-		"babel-preset-env": "^1.6.1",
-		"eslint": "^4.15.0",
-		"eslint-plugin-html": "^4.0.1",
-		"eslint-plugin-react": "^7.5.1",
-		"lerna": "^2.7.1"
-	},
-	"dependencies": {
-		"babel-polyfill": "^6.26.0",
-		"babel-runtime": "^6.26.0",
-		"chalk": "^2.3.0",
-		"eslint-config-prettier": "^2.9.0",
-		"eslint-plugin-prettier": "^2.5.0",
-		"prettier": "^1.10.2",
-		"runscript": "^1.3.0",
-		"toml": "^2.3.3",
-		"xiu-plugin-shell": "^0.1.1"
-	}
+  "name": "xiu-cli",
+  "version": "0.0.5",
+  "description": "a mini shell tool by toml",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel src -d lib",
+    "precommit": "pretty-quick --staged",
+    "lint": "eslint --fix src/"
+  },
+  "files": ["bin", "lib"],
+  "bin": {
+    "xiu": "bin/xiu"
+  },
+  "keywords": ["shell", "ci"],
+  "author": "Yugo",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-react": "^7.5.1",
+    "lerna": "^2.7.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "chalk": "^2.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "husky": "^0.14.3",
+    "prettier": "^1.10.2",
+    "pretty-quick": "^1.2.1",
+    "runscript": "^1.3.0",
+    "toml": "^2.3.3",
+    "xiu-plugin-shell": "^0.1.1"
+  }
 }
