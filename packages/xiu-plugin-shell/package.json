@@ -1,6 +1,6 @@
 {
   "name": "xiu-plugin-shell",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "xiu shell plugin",
   "main": "index.js",
   "scripts": {
